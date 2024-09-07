@@ -1,0 +1,5 @@
+-r main.in
+-c main.txt
+
+pytest
+moto
