@@ -21,5 +21,5 @@ test:
 	$(ACTIVATE) pytest .
 
 format:
-	$(ACTIVATE) black connect4 tests
-	$(ACTIVATE) ruff check --fix connect4 tests
+	$(ACTIVATE) black signalboost tests
+	$(ACTIVATE) ruff check --fix signalboost tests
