@@ -20,3 +20,12 @@ The main components are:
   - Database is exactly what it sounds like - interfacing for databases that hold the features.
 - Feed
   - Feeds are the input/output pipelines for the features.
+
+# Requirements
+Building requirements works as such:
+
+1. run `make venv`
+2. in the requirements folder, use the `*.in` files to list your requirements just like you would in `requirements.txt`
+3. because each `*.in` file is specific to an environment, it makes packaging smaller, since linting/formatting isn't necessary.  
+4. once those are all filled out correctly, run `make requirements`
+5. `make requirements` hits a target in the `requirements/Makefile` that generates a resolver for the dependencies so it finds a way to have the optimal versions of each package.
