@@ -84,11 +84,11 @@ class FeatureSummary:
 class Features(BaseModel):
     id: str
     features: DefaultDict[str, Annotated[list[Any], Field(default_factory=list)]] = (
-        Field(default_factory=lambda: defaultdict(list))
+        Field(default=defaultdict(list))
     )
     summaries: DefaultDict[
         str, Annotated[FeatureSummary, Field(default_factory=FeatureSummary)]
-    ] = Field(default_factory=lambda: defaultdict(FeatureSummary))
+    ] = Field(default=defaultdict(FeatureSummary))
 
     model_config = ConfigDict(arbitrary_types_allowed=True)
 
